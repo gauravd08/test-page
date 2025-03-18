@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce Landing Page</title>
+    <title>Mobile Phones Listing</title>
     <style>
         * {
             margin: 0;
@@ -20,28 +20,33 @@
             padding: 15px 20px;
             text-align: center;
         }
-        .hero {
-            background: url('https://source.unsplash.com/1600x600/?shopping') no-repeat center;
-            background-size: cover;
-            height: 60vh;
+        .container {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
+            padding: 20px;
         }
-        .hero h1 {
-            font-size: 3rem;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 10px 20px;
+        .filters {
+            width: 25%;
+            background: white;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
         }
-        .products {
+        .filters h3 {
+            margin-bottom: 10px;
+        }
+        .filter-group {
+            margin-bottom: 15px;
+        }
+        .filter-group label {
+            display: block;
+            margin: 5px 0;
+        }
+        .product-list {
+            width: 75%;
             display: flex;
-            justify-content: center;
-            gap: 20px;
             flex-wrap: wrap;
-            padding: 40px 20px;
+            gap: 20px;
+            justify-content: center;
         }
         .product {
             background: white;
@@ -80,33 +85,69 @@
 </head>
 <body>
     <header>
-        <h1>ShopEase</h1>
+        <h1>Mobile Store</h1>
     </header>
-    <section class="hero">
-        <h1>Find Your Best Deals Here</h1>
-    </section>
-    <section class="products">
-        <div class="product">
-            <img src="https://source.unsplash.com/250x250/?shoes" alt="Product 1">
-            <h3>Stylish Shoes</h3>
-            <p>$49.99</p>
-            <button>Add to Cart</button>
-        </div>
-        <div class="product">
-            <img src="https://source.unsplash.com/250x250/?watch" alt="Product 2">
-            <h3>Luxury Watch</h3>
-            <p>$129.99</p>
-            <button>Add to Cart</button>
-        </div>
-        <div class="product">
-            <img src="https://source.unsplash.com/250x250/?headphones" alt="Product 3">
-            <h3>Wireless Headphones</h3>
-            <p>$79.99</p>
-            <button>Add to Cart</button>
-        </div>
-    </section>
+    <div class="container">
+        <aside class="filters">
+            <h3>Filters</h3>
+            <div class="filter-group">
+                <h4>Brand</h4>
+                <label><input type="checkbox"> Apple</label>
+                <label><input type="checkbox"> Samsung</label>
+                <label><input type="checkbox"> OnePlus</label>
+                <label><input type="checkbox"> Google</label>
+            </div>
+            <div class="filter-group">
+                <h4>Price</h4>
+                <label><input type="radio" name="price"> Under $300</label>
+                <label><input type="radio" name="price"> $300 - $600</label>
+                <label><input type="radio" name="price"> $600 - $1000</label>
+                <label><input type="radio" name="price"> Over $1000</label>
+            </div>
+            <div class="filter-group">
+                <h4>Storage</h4>
+                <label><input type="checkbox"> 64GB</label>
+                <label><input type="checkbox"> 128GB</label>
+                <label><input type="checkbox"> 256GB</label>
+                <label><input type="checkbox"> 512GB</label>
+            </div>
+            <div class="filter-group">
+                <h4>RAM</h4>
+                <label><input type="checkbox"> 4GB</label>
+                <label><input type="checkbox"> 6GB</label>
+                <label><input type="checkbox"> 8GB</label>
+                <label><input type="checkbox"> 12GB</label>
+            </div>
+        </aside>
+        <section class="product-list">
+            <div class="product">
+                <img src="https://source.unsplash.com/250x250/?iphone" alt="iPhone">
+                <h3>iPhone 13</h3>
+                <p>$799.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://source.unsplash.com/250x250/?samsung" alt="Samsung">
+                <h3>Samsung Galaxy S22</h3>
+                <p>$899.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://source.unsplash.com/250x250/?oneplus" alt="OnePlus">
+                <h3>OnePlus 9</h3>
+                <p>$729.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://source.unsplash.com/250x250/?pixel" alt="Google Pixel">
+                <h3>Google Pixel 6</h3>
+                <p>$649.99</p>
+                <button>Add to Cart</button>
+            </div>
+        </section>
+    </div>
     <footer>
-        <p>&copy; 2025 ShopEase. All rights reserved.</p>
+        <p>&copy; 2025 Mobile Store. All rights reserved.</p>
     </footer>
 </body>
 </html>
